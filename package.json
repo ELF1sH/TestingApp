@@ -1,0 +1,42 @@
+{
+  "env": {
+    "tests": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs"
+      ]
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "tests": "jest"
+  },
+  "jest": {
+    "roots": [
+      "__tests__"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "name": "tests",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.17.7",
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
