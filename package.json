@@ -1,6 +1,6 @@
 {
   "env": {
-    "tests": {
+    "test": {
       "plugins": [
         "@babel/plugin-transform-modules-commonjs"
       ]
@@ -14,8 +14,8 @@
     "roots": [
       "__tests__"
     ],
-    "testPathIgnorePatterns": [
-      "/node_modules/"
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
     ],
     "moduleFileExtensions": [
       "js",
@@ -28,10 +28,12 @@
   },
   "name": "tests",
   "version": "1.0.0",
-  "main": "script.js",
-  "dependencies": {},
+  "main": "multiply.js",
+  "dependencies": {
+    "node-fetch": "^3.2.3"
+  },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.17.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "jest": "^27.5.1"
   },

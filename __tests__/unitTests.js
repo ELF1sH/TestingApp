@@ -1,4 +1,4 @@
-import {multiply} from "../script.js";
+import {multiply} from "../multiply.js";
 
 test("Simple multiplication", () => {
     expect(multiply("15", "295")).toBe("4425")
