@@ -1,4 +1,5 @@
 export function multiply(a, b) {
+    if (!a || !b) return new Error("Empty argument")
     let isResultNegative = false
     if (a[0] === "-") {
         isResultNegative = !isResultNegative
@@ -12,10 +13,10 @@ export function multiply(a, b) {
     a = a.split('').reverse().join('')
     b = b.split('').reverse().join('')
     for (const symbol of a) {
-        if (!ALPHABET.includes(symbol)) throw new Error("Invalid character")
+        if (!ALPHABET.includes(symbol)) return new Error("Invalid character")
     }
     for (const symbol of b) {
-        if (!ALPHABET.includes(symbol)) throw new Error("Invalid character")
+        if (!ALPHABET.includes(symbol)) return new Error("Invalid character")
     }
     const results = []
     for (let digitB of b) {

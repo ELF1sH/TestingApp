@@ -1,34 +1,12 @@
-import fetch from "node-fetch";
+import {multiply} from "./multiply.js";
 
-const URL = "http://testapp/multiply"
+const testFieldA = document.getElementById("textFieldA")
+const testFieldB = document.getElementById("textFieldB")
+const btnCalculate = document.getElementById("btnCalculate")
+const resultSpan = document.getElementById("resultSpan")
 
-export const cacheData = async (data) => {
-    const response = await fetch(URL, {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer',
-        body: JSON.stringify(data)
-    });
-    return response
-}
-
-export const getLastEntry = async () => {
-    const response = await fetch(URL + "/getLastEntry", {
-        method: 'GET',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer'
-    });
-    return response
-}
+btnCalculate.addEventListener("click", () => {
+    const a = testFieldA.value
+    const b = testFieldB.value
+    resultSpan.innerText = multiply(a, b)
+})

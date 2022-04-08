@@ -10,32 +10,16 @@
   "scripts": {
     "tests": "jest"
   },
-  "jest": {
-    "roots": [
-      "__tests__"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!variables/.*)"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "es6"
-    ],
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
-  },
   "name": "tests",
   "version": "1.0.0",
   "main": "multiply.js",
   "dependencies": {
+    "cypress": "^9.5.3",
     "node-fetch": "^3.2.3"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "jest": "^27.5.1"
+    "@babel/preset-env": "^7.16.11"
   },
   "keywords": [],
   "author": "",

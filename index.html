@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            min-width: 1000px;
+        }
+        #btnCalculate {
+            padding: 10px 20px;
+            background: none;
+        }
+        .result {
+            font-size: 20px;
+        }
+        #resultSpan {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Testing app stage 3</h2>
+
+    <label for="textFieldA">First multiplier (a)</label>
+    <input type="text" id="textFieldA" required />
+
+    <label for="textFieldB">Second multiplier (b)</label>
+    <input type="text" id="textFieldB" required />
+
+    <button id="btnCalculate">Calculate!</button>
+
+    <p class="result">The result is: <span id="resultSpan"></span></p>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
