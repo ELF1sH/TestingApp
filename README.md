@@ -6,4 +6,4 @@ PART I. Unit tests
 
 PART II. Integration tests. Simple self-made php API + mysql db
 
-PART III. E2E tests. ⚠️There is individual branch for this.⚠️
+PART III. E2E tests. ⚠️There is individual branch for this.⚠️ Tests are located inside /cypress/integration
